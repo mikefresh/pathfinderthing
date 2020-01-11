@@ -1,2 +1,0 @@
-# pathfinderthing
-Created with CodeSandbox
