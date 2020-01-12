@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import FeatTag from "./feat_tag";
 
 const CLASSES = gql`
   {
@@ -26,6 +27,8 @@ function Feats() {
       <h2>{name}</h2>
       <p>{description}</p>
       <h3>Pre Reqs</h3>
+
+      <FeatTag prereqs={feats_prereqs}></FeatTag>
     </div>
   ));
 }
