@@ -7,6 +7,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import Classes from "./classes";
 import Nav from "./components/nav";
 import Feats from "./Feats";
+import Skills from "./components/Skills";
 const client = new ApolloClient({
   uri: "https://pathfinderdemo.herokuapp.com/v1/graphql"
 });
@@ -20,6 +21,7 @@ const App = () => (
     <Nav></Nav>
     <Router>
       <Home path="/" />
+      <Skills path="/skills" />
       <Classes path="/classes" />
       <Feats path="/feats" />
     </Router>

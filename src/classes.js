@@ -18,9 +18,12 @@ function Classes() {
   if (error) return <p>Error...</p>;
   return (
     <div>
-      {data.classes.map((value, index) => {
-        return <h2 key={index}>{value.name}</h2>;
-      })}
+      <h2>Classes</h2>
+      <ul>
+        {data.classes.map((value, index) => {
+          return <li key={index}>{value.name}</li>;
+        })}
+      </ul>
       <CreateClass />
     </div>
   );
