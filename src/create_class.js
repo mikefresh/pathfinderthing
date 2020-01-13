@@ -1,6 +1,7 @@
 import React from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import { Button } from "antd";
 
 const ADD_CLASS = gql`
   mutation AddClass($name: String!) {
@@ -27,7 +28,7 @@ function CreateClass() {
             input = node;
           }}
         />
-        <button type="submit"> Add </button>
+        <Button type="submit"> Add </Button>
       </form>
     </div>
   );
