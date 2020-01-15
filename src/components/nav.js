@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 function Nav() {
   return (
-    <ul class="nav">
+    <ul className="nav">
       <li>
         <Link to="/">Home</Link>
       </li>
