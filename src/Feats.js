@@ -26,7 +26,7 @@ function Feats() {
 
   return (
     <div className="feats">
-      <section>
+      <section className="feats-list">
         {data.feats.map(({ id, name, description, feats_prereqs }, index) => (
           <div key={id} className="feat">
             <h2>{name}</h2>
