@@ -16,6 +16,9 @@ function Nav() {
       <li>
         <Link to="/feats">Feats</Link>
       </li>
+      <li>
+        <Link to="/character_creation">Character Creation</Link>
+      </li>
     </ul>
   );
 }

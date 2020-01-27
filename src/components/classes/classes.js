@@ -17,14 +17,16 @@ function Classes() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
   return (
-    <div>
+    <div className="classes">
       <h2>Classes</h2>
-      <ul>
-        {data.classes.map((value, index) => {
-          return <li key={index}>{value.name}</li>;
-        })}
-      </ul>
-      <CreateClass />
+      <section>
+        <ul className="class-list">
+          {data.classes.map((value, index) => {
+            return <li key={index}>{value.name}</li>;
+          })}
+        </ul>
+        <CreateClass />
+      </section>
     </div>
   );
 }

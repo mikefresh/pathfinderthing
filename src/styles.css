@@ -13,6 +13,18 @@ body {
   border-bottom: solid 1px black;
 }
 
+.classes section {
+  display: flex;
+}
+
+.classes .class-list {
+  flex-grow: 2;
+}
+
+.classes .create-class {
+  max-width: 300px;
+}
+
 .nav {
   display: flex;
   list-style: none;
@@ -27,6 +39,7 @@ body {
 
 .feats {
   display: flex;
+  flex-direction: row;
 }
 
 .feats .feats-list {
@@ -47,4 +60,41 @@ body {
 
 .skills {
   width: 200px;
+}
+
+.new-feat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.new-feat .prereqs-feats {
+  flex-grow: 1;
+}
+
+.new-feat .prereqs-skills,
+.new-feat .prereqs-skills,
+.new-feat .prereqs-ability-scores {
+  flex-grow: 1;
+}
+
+.new-feat .prereqs-skills .ant-select {
+  width: 100%;
+}
+
+.new-feat .prereqs-ability-scores .ant-select {
+  width: 100%;
+}
+
+.new-feat .prereqs-feats .ant-select {
+  width: 100%;
+}
+
+.steps {
+  margin-bottom: 20px;
+}
+
+form.start {
+  max-width: 400px;
 }

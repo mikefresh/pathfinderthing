@@ -1,8 +1,8 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
-import FeatTag from "./feat_tag";
-import NewFeat from "./components/new_feat";
+import FeatTag from "../helpers/feat_tag";
+import { Link } from "@reach/router";
 
 const CLASSES = gql`
   {
@@ -29,14 +29,16 @@ function Feats() {
       <section className="feats-list">
         {data.feats.map(({ id, name, description, feats_prereqs }, index) => (
           <div key={id} className="feat">
-            <h2>{name}</h2>
+            <h2>
+              {name} <Link to={`edit/${id}`}>Edit</Link>
+            </h2>
             <p>{description}</p>
             <h3>Pre Reqs</h3>
             <FeatTag prereqs={feats_prereqs}></FeatTag>
           </div>
         ))}
       </section>
-      <NewFeat feats={data.feats}></NewFeat>
+      <Link to="new">Add Feat</Link>
     </div>
   );
 }
